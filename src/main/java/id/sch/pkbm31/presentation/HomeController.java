@@ -19,7 +19,7 @@ public class HomeController {
     private Button btnDashboard;
 
     @FXML
-    private Button btnDeskripsiNilai;
+    private Button btnNilaiSikap;
 
     @FXML
     private Button btnLegerNilai;
@@ -31,13 +31,13 @@ public class HomeController {
     private Button btnPesertaDidik;
 
     @FXML
-    void gotoAbsensi(ActionEvent event) {
-
+    void gotoAbsensi(ActionEvent event) throws IOException {
+    	Main.setRoot("Absensi");
     }
 
     @FXML
-    void gotoCatatanWaliKelas(ActionEvent event) {
-
+    void gotoCatatanWaliKelas(ActionEvent event) throws IOException {
+    	Main.setRoot("CatatanWaliKelas");
     }
 
     @FXML
@@ -46,7 +46,7 @@ public class HomeController {
     }
 
     @FXML
-    void gotoDeskripsiNilai(ActionEvent event) {
+    void gotoNilaiSikap(ActionEvent event) {
 
     }
 
