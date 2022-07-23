@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="dialog" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.sch.pkbm31.presentation.FormFilterLegerNilaiController">
+   <content>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+         <top>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Filter Leger Nilai" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+         </top>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <center>
+            <GridPane prefWidth="385.0" vgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="-Infinity" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="483.0" minWidth="-Infinity" prefWidth="250.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NISN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Peserta Diidk" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kode Mata Pelajaran" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtKodeMapel" editable="false" prefHeight="30.0" prefWidth="304.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNisn" editable="false" prefHeight="30.0" prefWidth="304.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNamaPesertaDidik" editable="false" prefHeight="30.0" prefWidth="304.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Mata Pelajaran" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtNamaMapel" editable="false" prefHeight="30.0" prefWidth="304.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nilai Semester Ganjil" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nilai Semester Genap" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <HBox GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <ComboBox fx:id="cboOprGanjil" prefHeight="30.0" prefWidth="150.0" />
+                        <TextField fx:id="txtNilaiGanjil" editable="false" prefHeight="30.0" prefWidth="304.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <ComboBox fx:id="cboOprGenap" prefHeight="30.0" prefWidth="150.0" />
+                        <TextField fx:id="txtNilaiGenap" editable="false" prefHeight="30.0" prefWidth="304.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </content>
+   <buttonTypes>
+      <ButtonType fx:constant="OK" />
+      <ButtonType fx:constant="CANCEL" />
+   </buttonTypes>
+</DialogPane>

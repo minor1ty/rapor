@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="dialog" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.sch.pkbm31.presentation.FormPesertaDidikController">
+   <content>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+         <top>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Form Peserta Didik" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+         </top>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <center>
+            <GridPane hgap="20.0" vgap="10.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+              </rowConstraints>
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NISN" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="10.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Lengkap" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtNamaLengkap" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Text layoutX="10.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Agama" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="cboJenisKelamin" maxWidth="1.7976931348623157E308" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtNisn" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="cboAgama" maxWidth="1.7976931348623157E308" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nomor">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtTableId" editable="false" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </content>
+   <buttonTypes>
+      <ButtonType fx:constant="OK" />
+      <ButtonType fx:constant="CANCEL" />
+   </buttonTypes>
+</DialogPane>
