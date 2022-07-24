@@ -5,12 +5,15 @@ import java.sql.SQLException;
 import java.util.Optional;
 
 import id.sch.pkbm31.Main;
+import id.sch.pkbm31.application.AbsensiDAO;
 import id.sch.pkbm31.application.AkunPengguna;
 import id.sch.pkbm31.application.AkunPenggunaDAO;
+import id.sch.pkbm31.application.CatatanWaliKelasDAO;
 import id.sch.pkbm31.application.LegerNilaiDAO;
 import id.sch.pkbm31.application.LoginInfo;
 import id.sch.pkbm31.application.LoginInfoDAO;
 import id.sch.pkbm31.application.MataPelajaranDAO;
+import id.sch.pkbm31.application.NilaiSikapDAO;
 import id.sch.pkbm31.application.PesertaDidikDAO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -57,6 +60,9 @@ public class LoginController {
     	PesertaDidikDAO.createPesertaDidik();
     	MataPelajaranDAO.createMataPelajaran();
     	LegerNilaiDAO.createLegerNilai();
+    	CatatanWaliKelasDAO.createCatatanWaliKelas();
+    	NilaiSikapDAO.createNilaiSikap();
+    	AbsensiDAO.createAbsensi();
     	/**
     	LoginInfoDAO.checkLoginInfo();
     	    	

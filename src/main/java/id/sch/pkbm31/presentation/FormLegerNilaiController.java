@@ -36,44 +36,12 @@ public class FormLegerNilaiController {
     private void populatePesertaDidik (ObservableList<FormLegerNilai> pesertaDidikData) throws ClassNotFoundException {
         //Set items to the userTable
     	cboNamaPesertaDidik.setItems(pesertaDidikData);
-    	cboNamaPesertaDidik.setConverter(new StringConverter<FormLegerNilai>() {
-    		@Override
-    		public String toString(FormLegerNilai object) {
-    			if (object == null) {
-    				return null;
-    			}
-    			return object.getPesertaDidik();
-    		}
-    		
-    		@Override
-    		public FormLegerNilai fromString(String string) {
-    			return cboNamaPesertaDidik.getItems().stream().filter(ap ->
-    					ap.getPesertaDidik().equals(string)).findFirst().orElse(null);
-    		}
-    	});
     }
     
     @FXML
     private void populateMataPelajaran (ObservableList<FormLegerNilai> mataPelajaranData) throws ClassNotFoundException {
         //Set items to the userTable
     	cboMataPelajaran.setItems(mataPelajaranData);
-    	cboMataPelajaran.setConverter(new StringConverter<FormLegerNilai>() {
-    		@Override
-    		public String toString(FormLegerNilai object) {
-    			if (object == null) {
-    				System.out.println(object);
-    				return null;
-    			}
-    			System.out.println(object);
-    			return object.getMataPelajaran();
-    		}
-    		
-    		@Override
-    		public FormLegerNilai fromString(String string) {
-    			return cboMataPelajaran.getItems().stream().filter(ap ->
-    					ap.getMataPelajaran().equals(string)).findFirst().orElse(null);
-    		}
-    	});
     }
     
     
@@ -85,8 +53,12 @@ public class FormLegerNilaiController {
             ObservableList<FormLegerNilai> pesertaDidikData = FormLegerNilaiDAO.searchPesertaDidik();
             ObservableList<FormLegerNilai> mataPelajaranData = FormLegerNilaiDAO.searchMataPelajaran();
             //Populate Employees on TableView
+            
+            
             populatePesertaDidik(pesertaDidikData);
             populateMataPelajaran(mataPelajaranData);
+            
+            
         } catch (SQLException e){
             System.out.println("Error occurred while getting employees information from DB.\n" + e);
             throw e;
