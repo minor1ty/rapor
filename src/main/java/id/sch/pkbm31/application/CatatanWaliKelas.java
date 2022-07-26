@@ -17,13 +17,35 @@ public class CatatanWaliKelas {
 	}
 
 	//NISN
-		public String getNisn() {
-	        return nisn.get();
-	    }
-	    public void setNisn(String nisn){
-	        this.nisn.set(nisn);
-	    }
-	    public StringProperty nisnProperty() {
-	        return nisn;
-	    }
+	public String getNisn() {
+	    return nisn.get();
+	}
+	public void setNisn(String nisn){
+	    this.nisn.set(nisn);
+	}
+	public StringProperty nisnProperty() {
+	    return nisn;
+	}
+	
+	//NamaPesertaDidik
+	public String getNamaPesertaDidik() {
+	    return namaPesertaDidik.get();
+	}
+	public void setNamaPesertaDidik(String namaPesertaDidik){
+	    this.namaPesertaDidik.set(namaPesertaDidik);
+	}
+	public StringProperty namaPesertaDidikProperty() {
+	    return namaPesertaDidik;
+	}
+	
+	//Catatan
+	public String getCatatan() {
+	    return namaPesertaDidik.get();
+	}
+	public void setCatatan(String catatan){
+	    this.catatan.set(catatan);
+	}
+	public StringProperty catatanProperty() {
+	    return catatan;
+	}
 }
