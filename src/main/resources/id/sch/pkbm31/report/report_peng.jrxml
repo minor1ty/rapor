@@ -14,7 +14,7 @@
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
 			<image>
 				<reportElement x="0" y="0" width="104" height="101" uuid="92a48f86-947a-45af-a214-f35b101d2683"/>
-				<imageExpression><![CDATA["E:\Kampus\KKP\logoDKI.png"]]></imageExpression>
+				<imageExpression><![CDATA["logoDKI.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="135" y="0" width="284" height="20" uuid="d57c3a09-2aea-4b0d-82a9-84939ae08378"/>
