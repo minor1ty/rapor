@@ -133,7 +133,7 @@ public class LegerNilaiController {
     }
 
     @FXML
-    void sunting(ActionEvent event) throws IOException {
+    void sunting(ActionEvent event) throws IOException, ClassNotFoundException, SQLException {
     	LegerNilai legerNilai = null;
     	String DialogTitle = "";
     	DialogMode mode;
@@ -171,36 +171,43 @@ public class LegerNilaiController {
     	dialog.setTitle(DialogTitle);
     	
     	Optional<ButtonType> clickedButton = dialog.showAndWait();
-    	/**
+    	
     	if (clickedButton.get() == ButtonType.OK) {
+    		String pesertaDidikData = formLegerNilaiController.cboNamaPesertaDidik.getSelectionModel().getSelectedItem().toString();
+			String[] pesertaDidikSplit = pesertaDidikData.split(" - ");
+			String nisnPesertaDidik = pesertaDidikSplit[0];
+			String namaPesertaDidik = pesertaDidikSplit[1];
+			
+			String mataPelajaranData = formLegerNilaiController.cboMataPelajaran.getSelectionModel().getSelectedItem().toString();
+			String[] mataPelajaranSplit = mataPelajaranData.split(" - ");
+			String kodeMapel = mataPelajaranSplit[0];
+			String namaMapel = mataPelajaranSplit[1];
+			
+			String ganjil = formLegerNilaiController.txtGanjil.getText();
+			String genap = formLegerNilaiController.txtGenap.getText();
+			
     		if (mode == DialogMode.TAMBAH) {
-    			FormLegerNilai pesertaDidik = formLegerNilaiController.cboNamaPesertaDidik.getSelectionModel().getSelectedItem();
-    			String result = "aaaa - aa".split(DialogTitle)
-    			
-
-    			LegerNilaiDAO.addLegerNilai(formLegerNilaiController.cboNamaPesertaDidik.getSelectionModel().getSelectedItem(), formMataPelajaranController.txtNamaMapel.getText(), formMataPelajaranController.txtPengetahuanKkm.getText(), formMataPelajaranController.txtPengetahuanTdkKkm.getText(), formMataPelajaranController.txtKeterampilanKkm.getText(), formMataPelajaranController.txtKeterampilanTdkKkm.getText());
-    			//int tableId = MataPelajaranDAO.getTableId(formMataPelajaranController.txtNamaMapel.getText());
-    			//MataPelajaranDAO.createSubMataPelajaran(tableId);
+    			LegerNilaiDAO.addLegerNilai(kodeMapel, nisnPesertaDidik, ganjil, genap);
 
     		} else if (mode == DialogMode.SUNTING) {
-    			MataPelajaranDAO.editMataPelajaran(formMataPelajaranController.txtTableId.getText(), formMataPelajaranController.txtNamaMapel.getText(), formMataPelajaranController.txtPengetahuanKkm.getText(), formMataPelajaranController.txtPengetahuanTdkKkm.getText(), formMataPelajaranController.txtKeterampilanKkm.getText(), formMataPelajaranController.txtKeterampilanTdkKkm.getText());
+    			LegerNilaiDAO.editLegerNilai(kodeMapel, nisnPesertaDidik, ganjil, genap);
     		}
     		
 
-			try {
-	            //Get all Users information
-	            ObservableList<MataPelajaran> mataPelajaranData = MataPelajaranDAO.searchMataPelajaran();
-	            //Populate Employees on TableView
-	            populateMataPelajaran(mataPelajaranData);
-	        } catch (SQLException e){
-	            System.out.println("Error occurred while getting Mata Pelajaran information from DB.\n" + e);
-	            throw e;
-	        }
-    	}**/
+    		try {
+                //Get all Users information
+                ObservableList<LegerNilai> legerNilaiData = LegerNilaiDAO.searchLegerNilai();
+                //Populate Employees on TableView
+                populateLegerNilai(legerNilaiData);
+            } catch (SQLException e){
+                System.out.println("Error occurred while getting employees information from DB.\n" + e);
+                throw e;
+            }
+    	}
     }
 
     @FXML
-    void tambah(ActionEvent event) throws IOException {
+    void tambah(ActionEvent event) throws IOException, ClassNotFoundException, SQLException {
     	sunting(event);
     }
 

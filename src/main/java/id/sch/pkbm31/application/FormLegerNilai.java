@@ -36,6 +36,12 @@ public class FormLegerNilai {
 	public StringProperty mataPelajaranProperty() {
 		return mataPelajaran;
 	}
+
+	@Override
+	public String toString() {
+		return this.getPesertaDidik();
+	}
+	
 	
 	
 }

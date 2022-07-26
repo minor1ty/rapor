@@ -75,9 +75,7 @@ public class FormLegerNilaiDAO {
         ObservableList<FormLegerNilai> mataPelajaranList = FXCollections.observableArrayList();
         while (rs.next()) {
         	FormLegerNilai mataPelajaran = new FormLegerNilai();
-        	System.out.println(rs.getString("kode_mapel") + " - " + rs.getString("nama_mapel"));
         	mataPelajaran.setPesertaDidik(rs.getString("kode_mapel") + " - " + rs.getString("nama_mapel"));
-        	System.out.println(mataPelajaran);
         	mataPelajaranList.add(mataPelajaran);
         }
         //return userList (ObservableList of Users)

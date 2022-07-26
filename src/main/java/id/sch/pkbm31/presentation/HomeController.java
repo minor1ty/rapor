@@ -47,7 +47,7 @@ public class HomeController {
 
     @FXML
     void gotoNilaiSikap(ActionEvent event) throws IOException {
-    	Main.setRoot("CatatanWaliKelas");
+    	Main.setRoot("NilaiSikap");
     }
 
     @FXML
