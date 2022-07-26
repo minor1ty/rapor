@@ -36,10 +36,44 @@
 		<band height="35" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch"/>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="5da86426-4920-4576-bbde-8130b8e3b7f0"/>
+				<text><![CDATA[NISN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="140" height="20" uuid="398dff0c-3fc7-4b58-902b-53b3871f9e5d"/>
+				<text><![CDATA[Nama Lengkap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="140" height="20" uuid="7dd06b18-3e4b-442c-8907-03b49b92e6ab"/>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="140" height="20" uuid="f3c3152d-dd03-4dc3-9cd3-6089397c6538"/>
+				<text><![CDATA[Agama]]></text>
+			</staticText>
+		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="abfe55cb-5505-4393-93bf-0437557b678e"/>
+				<textFieldExpression><![CDATA[$F{nisn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="140" height="20" uuid="6bc43278-f602-4251-9d80-4f155dfa8897"/>
+				<textFieldExpression><![CDATA[$F{nama_lengkap}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="140" height="20" uuid="ca3b1018-d89c-41f4-badd-7dea6e6fee1d"/>
+				<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="140" height="20" uuid="c900c588-c7bd-42ca-9fb4-de09ff435381"/>
+				<textFieldExpression><![CDATA[$F{agama}]]></textFieldExpression>
+			</textField>
+		</band>
 	</detail>
 	<columnFooter>
 		<band height="45" splitType="Stretch"/>
