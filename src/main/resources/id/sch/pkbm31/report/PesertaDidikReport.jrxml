@@ -30,47 +30,146 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch"/>
+		<band height="101" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="104" height="101" uuid="762b5ecf-d143-49a5-a4de-838819e6bb15"/>
+				<imageExpression><![CDATA["logoDKI.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="135" y="0" width="284" height="20" uuid="ee42879d-1016-4fdd-939f-dba89f782205"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUSAT KEGIATAN BELAJAR MASYARAKAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="21" width="150" height="26" uuid="ec2d2592-827d-432a-bfef-42b935421537"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PKBM NEGERI 31]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="41" width="370" height="19" uuid="bc98258e-090d-4780-86f3-8cdd336d274c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Kemang Timur Raya No.3, Kel. Bangka, Kec. Mampang Prapatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="60" width="220" height="20" uuid="cf7318c9-1e53-4679-9aee-151414fc7cb6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kota Administrasi Jakarta Selatan 13730]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="80" width="110" height="20" uuid="ccca9d1d-4e27-40ed-b086-a4aee545db1a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telp. (021) -7984921]]></text>
+			</staticText>
+		</band>
 	</title>
 	<pageHeader>
-		<band height="35" splitType="Stretch"/>
+		<band height="26" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="-1" width="550" height="1" uuid="78b5345e-4d31-4e8d-91bc-582d2008d75d"/>
+			</line>
+			<staticText>
+				<reportElement x="2" y="0" width="550" height="26" uuid="34b886b2-0cff-41b9-bcfa-fd33853dcc79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA PESERTA DIDIK]]></text>
+			</staticText>
+		</band>
 	</pageHeader>
 	<columnHeader>
 		<band height="20" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="100" height="20" uuid="5da86426-4920-4576-bbde-8130b8e3b7f0"/>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[NISN]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="100" y="0" width="140" height="20" uuid="398dff0c-3fc7-4b58-902b-53b3871f9e5d"/>
+				<reportElement x="100" y="0" width="172" height="20" uuid="398dff0c-3fc7-4b58-902b-53b3871f9e5d"/>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Nama Lengkap]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="240" y="0" width="140" height="20" uuid="7dd06b18-3e4b-442c-8907-03b49b92e6ab"/>
+				<reportElement x="272" y="0" width="140" height="20" uuid="7dd06b18-3e4b-442c-8907-03b49b92e6ab"/>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Jenis Kelamin]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="380" y="0" width="140" height="20" uuid="f3c3152d-dd03-4dc3-9cd3-6089397c6538"/>
+				<reportElement x="412" y="0" width="140" height="20" uuid="f3c3152d-dd03-4dc3-9cd3-6089397c6538"/>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
 				<text><![CDATA[Agama]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="40" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="100" height="20" uuid="abfe55cb-5505-4393-93bf-0437557b678e"/>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{nisn}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="100" y="0" width="140" height="20" uuid="6bc43278-f602-4251-9d80-4f155dfa8897"/>
+				<reportElement x="100" y="0" width="172" height="20" uuid="6bc43278-f602-4251-9d80-4f155dfa8897"/>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{nama_lengkap}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="240" y="0" width="140" height="20" uuid="ca3b1018-d89c-41f4-badd-7dea6e6fee1d"/>
+				<reportElement x="272" y="0" width="140" height="20" uuid="ca3b1018-d89c-41f4-badd-7dea6e6fee1d"/>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="380" y="0" width="140" height="20" uuid="c900c588-c7bd-42ca-9fb4-de09ff435381"/>
+				<reportElement x="412" y="0" width="140" height="20" uuid="c900c588-c7bd-42ca-9fb4-de09ff435381"/>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{agama}]]></textFieldExpression>
 			</textField>
 		</band>
