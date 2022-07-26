@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_ket" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6b454ad4-a8f0-46f9-96d3-df3cf63e0887">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sqlitedb_rapor_conn"/>
+	<queryString language="SQL">
+		<![CDATA[select * from PESERTA_DIDIK;]]>
+	</queryString>
+	<background>
+		<band height="249" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+			<image>
+				<reportElement x="0" y="0" width="104" height="101" uuid="92a48f86-947a-45af-a214-f35b101d2683"/>
+				<imageExpression><![CDATA["E:\Kampus\KKP\logoDKI.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="135" y="0" width="284" height="20" uuid="d57c3a09-2aea-4b0d-82a9-84939ae08378"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUSAT KEGIATAN BELAJAR MASYARAKAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="21" width="150" height="26" uuid="44425690-9775-4393-95a9-454e1ea2946b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PKBM NEGERI 31]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="41" width="370" height="19" uuid="703c2a79-e851-405c-9c12-3cc922b42a2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Kemang Timur Raya No.3, Kel. Bangka, Kec. Mampang Prapatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="60" width="220" height="20" uuid="a2ffd656-52a5-4d37-9317-57d3c23c6e14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kota Administrasi Jakarta Selatan 13730]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="80" width="110" height="20" uuid="602b9141-cd4b-4bfa-8e95-4663915c8999"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telp. (021) -7984921]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="320" splitType="Stretch">
+			<staticText>
+				<reportElement x="116" y="6" width="344" height="20" uuid="738087f7-c7d4-487a-a11e-a47f136a0a8a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN HASIL BELAJAR PROGRAM PAKET C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="29" width="90" height="16" uuid="8e41307f-20dd-44a0-92ac-6c9761ff4112"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Lengkap                                   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="45" width="90" height="16" uuid="09edf6e3-2505-4332-8902-77bddff9f012"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[NISN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="61" width="90" height="16" uuid="0b2c7329-2ec8-4cc6-bfb5-1e2fc70460d3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tahun Pelajaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="286" width="190" height="26" uuid="ec0b0416-7146-4894-943e-b5bd7bfe6056"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PENGETAHUAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="29" width="3" height="16" uuid="4881f1b0-632a-41f9-a292-7f1b53e1b411"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="3" width="550" height="1" uuid="fef78337-1f3e-4395-9de1-f84db1bc5ad6"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="302" width="500" height="17" uuid="530631db-8904-44aa-b769-c8632062f9d5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kriteria Ketuntasan Minimal = 72 (Kecuali Mata Pelajaran Matematika dan bahasa inggris= 70 )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="45" width="3" height="16" uuid="e8e19201-ce47-480b-934a-0aff4fa1a66e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="61" width="3" height="16" uuid="39a87642-34c0-41cc-927c-a98ac729b2ea"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="29" width="90" height="16" uuid="7c511e31-eaba-4b75-a2b0-09006aa7dc10"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Program]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="45" width="90" height="16" uuid="1afc69b2-94f3-4e2e-870d-d871da588827"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="61" width="90" height="16" uuid="b5a7de60-df39-408e-b1b9-f06da8bc79ba"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Semester]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="29" width="3" height="16" uuid="216ed228-6e64-4702-bad1-1d6d6beb9f7b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="45" width="3" height="16" uuid="21205f98-057a-4dd6-9422-a1179d6a79d8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="61" width="3" height="16" uuid="85ac5be7-3b7c-49c9-98c1-a0f63cdc9c7f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="96" width="500" height="17" uuid="1e74cee8-cc3f-40fb-8a86-2f99e6043909"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sikap Spiritual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="92" height="16" uuid="430fabe7-b3cc-461f-8421-fdabb267206e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SIKAP]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="0" y="113" width="125" height="20" uuid="5daf4b61-4a4c-45d1-a197-6504cf8aefdc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="125" y="113" width="425" height="20" uuid="ce89f25d-9649-4531-ae61-86a3cf3f2bf8"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="125" y="133" width="425" height="47" uuid="387b2f7f-0378-40ee-add3-338884c78db2"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="0" y="133" width="125" height="47" uuid="7171198d-430f-4779-bd3e-a53a3c56a1da"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement x="0" y="189" width="500" height="17" uuid="925bd5db-7062-4224-8b93-fa8ec014329e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sikap Sosial]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="0" y="206" width="125" height="20" uuid="a318d047-fd55-48e7-930e-cebd95119002"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="125" y="206" width="425" height="20" uuid="009a2026-4f2d-4c2e-b082-bffdc0a7d364"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="125" y="226" width="425" height="47" uuid="156f6e8c-4c8f-4bd7-ae29-7e14a75206ae"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="0" y="226" width="125" height="47" uuid="684ec252-0ac2-4cd2-a035-a6b5c641a7a0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<frame>
+				<reportElement x="199" y="0" width="351" height="20" uuid="81742013-c094-4573-acb1-bb70362ea5e0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="310" y="20" width="240" height="20" uuid="4f312f2c-62bc-411e-ac36-52bbd8ea38ab"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="199" y="20" width="50" height="20" uuid="a8d548f4-1342-4792-88a2-ee11f3a83020"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement x="50" y="0" width="61" height="20" uuid="d29c1fdf-46c2-4be3-b37d-1d9be2e3b4c3"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+				</frame>
+				<staticText>
+					<reportElement x="0" y="0" width="50" height="20" uuid="90ddc5e7-be02-4866-92a0-1d537fe6b979"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nilai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="50" y="0" width="61" height="20" uuid="75a71676-d669-4821-836f-f7b04d957697">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Predikat]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="111" y="0" width="240" height="20" uuid="8aab021e-8704-4524-9de9-fa94d983b811"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Deskripsi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="-198" y="-227" width="124" height="20" uuid="121726f7-b952-42db-8eef-fe28b6fedf4c">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Predikat]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="110" y="-227" width="65" height="20" uuid="155ba154-dd8a-41f8-9270-51fbb2ee0173">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Deskripsi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="-198" y="-134" width="124" height="20" uuid="2de60f0e-2d1a-42da-a415-db8b9c2d73ad">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Predikat]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="111" y="-134" width="65" height="20" uuid="c9c01d39-e523-4aba-8503-98a6bcbacbc3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Deskripsi]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="0" width="34" height="40" uuid="c6999537-692b-4c06-9b0c-fd9267bb23d5"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="1" width="33" height="39" uuid="11195795-d207-4bcc-a907-d7c1fa600e7d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="34" y="0" width="165" height="40" uuid="9316a7fb-171e-443c-94a1-737d5a89145a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="1" width="164" height="40" uuid="db8cc92c-e42b-4f74-96a2-28ac6ae07220"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Mata Pelajaran]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="278" y="0" width="139" height="20" uuid="fca7e085-81f4-4c44-94cd-57b89f61eb00">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="ari" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Keterampilan]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+			<frame>
+				<reportElement x="0" y="0" width="34" height="41" uuid="2f5032f2-ca42-4def-9ce2-708ac268fcba"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="34" y="0" width="164" height="41" uuid="6f088eca-bb5f-4586-8bb6-c63d0c726e97"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="198" y="0" width="52" height="41" uuid="7ee0a63b-dd97-4469-bd05-06bab0848d8e"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="250" y="0" width="60" height="41" uuid="bec058f8-5182-4e92-8126-cb3d335d09af"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="310" y="0" width="240" height="41" uuid="14718dc9-1f9f-455b-934e-1f37dae840a3"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="191" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="198" height="20" uuid="ebf47d43-21ab-482f-a5d9-b0d1893c93b9"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="20" width="198" height="20" uuid="f2ca6729-0d9f-493a-95e7-c9fe7d4a20ca"/>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+				</frame>
+				<frame>
+					<reportElement x="0" y="40" width="550" height="20" uuid="84bbfc4e-8617-45a7-88cb-558a90102c76"/>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+				</frame>
+				<staticText>
+					<reportElement x="0" y="0" width="198" height="20" uuid="609ab656-eddc-4038-9526-073f0b2ddee0">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[JUMLAH]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="20" width="198" height="20" uuid="7ee62c4f-8e7c-4151-b9a4-a622c20f7b14">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RATA - RATA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="40" width="199" height="20" uuid="a1a7bca9-2dbf-4ffa-ac26-82385b3d2a5c">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[RANKING DI KELAS]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="198" y="0" width="52" height="20" uuid="604d41be-8efe-49e6-a058-73db6953ecc1"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="20" width="52" height="20" uuid="a6745ada-f78c-454f-b2ee-aeeaf31b3178"/>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement x="250" y="0" width="60" height="20" uuid="b63efad2-2407-47be-9dd6-79875e0bc477"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="20" width="60" height="20" uuid="09d606ff-11d7-4523-93fa-cab58cd1d83a"/>
+					<box>
+						<pen lineWidth="0.25"/>
+					</box>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement x="310" y="0" width="240" height="20" uuid="22bcac2b-ca31-4a84-819c-dc3cebf4c7f2"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="1" y="83" width="548" height="68" uuid="65d213bb-2f0d-4690-80e5-b3b224c482f4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement x="0" y="66" width="213" height="14" uuid="4f27872f-9595-48a2-b8c5-2b84aaae5327"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CATATAN AKADEMIK]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="310" y="20" width="240" height="20" uuid="3a1c923f-e097-4d65-8cbe-541bc5cbda46"/>
+				<box>
+					<pen lineWidth="0.25"/>
+				</box>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="180" splitType="Stretch"/>
+	</summary>
+</jasperReport>
