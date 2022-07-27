@@ -30,41 +30,41 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="101" splitType="Stretch">
-			<image>
-				<reportElement x="0" y="0" width="104" height="101" uuid="762b5ecf-d143-49a5-a4de-838819e6bb15"/>
+		<band height="100" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="10" y="0" width="80" height="89" uuid="762b5ecf-d143-49a5-a4de-838819e6bb15"/>
 				<imageExpression><![CDATA["logoDKI.png"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="135" y="0" width="284" height="20" uuid="ee42879d-1016-4fdd-939f-dba89f782205"/>
+				<reportElement x="156" y="0" width="284" height="20" uuid="ee42879d-1016-4fdd-939f-dba89f782205"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="13" isBold="true"/>
 				</textElement>
 				<text><![CDATA[PUSAT KEGIATAN BELAJAR MASYARAKAT]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="213" y="21" width="150" height="26" uuid="ec2d2592-827d-432a-bfef-42b935421537"/>
+				<reportElement x="234" y="21" width="150" height="26" uuid="ec2d2592-827d-432a-bfef-42b935421537"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="17" isBold="true"/>
 				</textElement>
 				<text><![CDATA[PKBM NEGERI 31]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="109" y="41" width="370" height="19" uuid="bc98258e-090d-4780-86f3-8cdd336d274c"/>
+				<reportElement x="130" y="41" width="370" height="19" uuid="bc98258e-090d-4780-86f3-8cdd336d274c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Jl. Kemang Timur Raya No.3, Kel. Bangka, Kec. Mampang Prapatan]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="186" y="60" width="220" height="20" uuid="cf7318c9-1e53-4679-9aee-151414fc7cb6"/>
+				<reportElement x="207" y="60" width="220" height="20" uuid="cf7318c9-1e53-4679-9aee-151414fc7cb6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Kota Administrasi Jakarta Selatan 13730]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="249" y="80" width="110" height="20" uuid="ccca9d1d-4e27-40ed-b086-a4aee545db1a"/>
+				<reportElement x="270" y="80" width="110" height="20" uuid="ccca9d1d-4e27-40ed-b086-a4aee545db1a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
@@ -73,12 +73,16 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="26" splitType="Stretch">
+		<band height="50" splitType="Stretch">
 			<line>
-				<reportElement x="2" y="-1" width="550" height="1" uuid="78b5345e-4d31-4e8d-91bc-582d2008d75d"/>
+				<reportElement x="0" y="0" width="555" height="1" uuid="78b5345e-4d31-4e8d-91bc-582d2008d75d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 			</line>
 			<staticText>
-				<reportElement x="2" y="0" width="550" height="26" uuid="34b886b2-0cff-41b9-bcfa-fd33853dcc79"/>
+				<reportElement x="2" y="12" width="550" height="26" uuid="34b886b2-0cff-41b9-bcfa-fd33853dcc79"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Arial" size="14" isBold="true"/>
 				</textElement>
@@ -131,56 +135,83 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="40" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="100" height="20" uuid="abfe55cb-5505-4393-93bf-0437557b678e"/>
+				<reportElement x="0" y="0" width="100" height="20" uuid="abfe55cb-5505-4393-93bf-0437557b678e">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<box padding="0">
 					<pen lineWidth="1.0"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nisn}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="100" y="0" width="172" height="20" uuid="6bc43278-f602-4251-9d80-4f155dfa8897"/>
+				<reportElement x="100" y="0" width="172" height="20" uuid="6bc43278-f602-4251-9d80-4f155dfa8897">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<box padding="0">
 					<pen lineWidth="1.0"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nama_lengkap}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="272" y="0" width="140" height="20" uuid="ca3b1018-d89c-41f4-badd-7dea6e6fee1d"/>
+				<reportElement x="272" y="0" width="140" height="20" uuid="ca3b1018-d89c-41f4-badd-7dea6e6fee1d">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<box padding="0">
 					<pen lineWidth="1.0"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="412" y="0" width="140" height="20" uuid="c900c588-c7bd-42ca-9fb4-de09ff435381"/>
+				<reportElement x="412" y="0" width="140" height="20" uuid="c900c588-c7bd-42ca-9fb4-de09ff435381">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
 				<box padding="0">
 					<pen lineWidth="1.0"/>
 				</box>
-				<textElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="12"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{agama}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
-	<columnFooter>
-		<band height="45" splitType="Stretch"/>
-	</columnFooter>
 	<pageFooter>
-		<band height="54" splitType="Stretch"/>
+		<band height="56" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="15" width="555" height="1" uuid="15932b93-bb67-4f97-b8b9-bcaef4ac81bf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="370" y="16" width="184" height="40" uuid="44674b40-42ac-4021-a82c-9d83ad95542b">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph rightIndent="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
 	</pageFooter>
-	<summary>
-		<band height="42" splitType="Stretch"/>
-	</summary>
 </jasperReport>

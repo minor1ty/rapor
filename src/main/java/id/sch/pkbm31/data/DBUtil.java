@@ -20,7 +20,7 @@ public class DBUtil {
     private static final String connStr = "jdbc:sqlite:src/main/resources/id/sch/pkbm31/data/rapor.db";
     
     //Connect to DB
-    public static void dbConnect() throws SQLException, ClassNotFoundException {
+    public static Connection dbConnect() throws SQLException, ClassNotFoundException {
         //Setting SQLite JDBC Driver
         try {
             Class.forName(JDBC_DRIVER);
@@ -38,6 +38,7 @@ public class DBUtil {
             e.printStackTrace();
             throw e;
         }
+		return conn;
     }
     
     //Close Connection

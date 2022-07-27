@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PerformaPesertaDidikSubReportMax" pageWidth="555" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="b11617c2-ae20-4e73-b39e-7bf821065a8c">
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+PD.nisn, PD.nama_lengkap, ROUND(AVG(LN.ganjil), 0) AS ganjil, ROUND(AVG(LN.genap), 0) AS genap
+FROM 
+PESERTA_DIDIK as PD
+INNER JOIN LEGER_NILAI AS LN ON PD.nisn = LN.nisn
+GROUP BY PD.nisn
+ORDER BY ganjil ASC
+LIMIT 10;]]>
+	</queryString>
+	<field name="nisn" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="nisn"/>
+		<property name="com.jaspersoft.studio.field.label" value="nisn"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="PESERTA_DIDIK"/>
+	</field>
+	<field name="nama_lengkap" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="nama_lengkap"/>
+		<property name="com.jaspersoft.studio.field.label" value="nama_lengkap"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="PESERTA_DIDIK"/>
+	</field>
+	<field name="ganjil" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="ganjil"/>
+		<property name="com.jaspersoft.studio.field.label" value="ganjil"/>
+	</field>
+	<field name="genap" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="genap"/>
+		<property name="com.jaspersoft.studio.field.label" value="genap"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="554" height="40" uuid="6edda114-8917-42e9-b829-182d3a511aa0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[10 PESERTA DIDIK DENGAN NILAI RATA-RATA TERENDAH]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="40" uuid="912cfb06-078b-4f85-b025-06e8ccf53a49">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NISN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="254" height="40" uuid="bb9859cf-1e0e-4fe7-ab88-a5f0d9304e34">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Lengkap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="200" height="20" uuid="dde58170-6e8d-4dda-8f2c-8fbb5bd0d123">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nilai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="20" width="100" height="20" uuid="9e95bfbe-696e-4e51-b72b-5bdc7a5f2dcf">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ganjil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="20" width="100" height="20" uuid="c3436195-32d1-4ee9-b76e-e5f00b29ddf2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Genap]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="ElementGroupHeight" x="100" y="0" width="254" height="20" uuid="50b05ddf-54fb-4a7e-a7c9-925435adc674">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="0" bottomPadding="3" rightPadding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_lengkap}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="ElementGroupHeight" x="355" y="0" width="100" height="20" isPrintWhenDetailOverflows="true" uuid="8438d526-1ea2-4b0b-825d-691b89aac2d7">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="0" bottomPadding="3" rightPadding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ganjil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="0" y="0" width="100" height="20" uuid="c3cd95b4-4a51-4612-b9c9-336adc26bc67">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="0" bottomPadding="3" rightPadding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nisn}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="ElementGroupHeight" x="455" y="0" width="100" height="20" uuid="5c8b21ad-911d-40b8-b2a3-154a9a75775d">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="0" bottomPadding="3" rightPadding="0">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{genap}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

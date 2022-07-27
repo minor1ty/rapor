@@ -1,12 +1,16 @@
 package id.sch.pkbm31.presentation;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 import id.sch.pkbm31.Main;
 import id.sch.pkbm31.application.PesertaDidik;
 import id.sch.pkbm31.application.PesertaDidikDAO;
+import id.sch.pkbm31.data.DBUtil;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +24,10 @@ import javafx.scene.control.DialogPane;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 public class PesertaDidikController {
 
@@ -96,8 +104,21 @@ public class PesertaDidikController {
     }
 
     @FXML
-    void cetakPesertaDidik(ActionEvent event) {
-
+    void cetakPesertaDidik(ActionEvent event) throws JRException, ClassNotFoundException, SQLException {
+    	JasperPrint jp;
+    	Map param = new HashMap();
+    	
+    	String reportPath = "/rapor/src/main/resources/id/sch/pkbm31/report/PesertaDidikReport.jasper";
+    	InputStream jasperStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(reportPath);
+    	if (jasperStream == null) {
+    	     System.out.println("Report Not Found");
+    	}
+    	
+    	jp = JasperFillManager.fillReport(jasperStream, param, DBUtil.dbConnect());
+    	
+    	JasperViewer viewer = new JasperViewer(jp, false);
+    	viewer.setTitle("Cetak Data Peserta Didik");
+    	viewer.setVisible(true);
     }
 
     @FXML

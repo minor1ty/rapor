@@ -1,6 +1,10 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
 encoding//src/main/resources=UTF-8
+encoding//src/main/resources/id/sch/pkbm31/report/MataPelajaranReport.jrxml=UTF-8
+encoding//src/main/resources/id/sch/pkbm31/report/PerformaPesertaDidikData.jrxml=UTF-8
+encoding//src/main/resources/id/sch/pkbm31/report/PerformaPesertaDidikSubReportMax.jrxml=UTF-8
+encoding//src/main/resources/id/sch/pkbm31/report/PerformaPesertaDidikSubReportMin.jrxml=UTF-8
 encoding//src/main/resources/id/sch/pkbm31/report/PesertaDidikReport.jrxml=UTF-8
 encoding//src/main/resources/id/sch/pkbm31/report/report_ket.jrxml=UTF-8
 encoding//src/main/resources/id/sch/pkbm31/report/report_peng.jrxml=UTF-8

@@ -4,6 +4,7 @@ module id.sch.pkbm31 {
 	requires java.sql;
 	requires java.sql.rowset;
 	requires javafx.base;
+	requires jasperreports;
 
     opens id.sch.pkbm31 to javafx.fxml;
     opens id.sch.pkbm31.presentation;

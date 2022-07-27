@@ -307,11 +307,11 @@
 					<text><![CDATA[Nilai]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="50" y="0" width="61" height="20" uuid="75a71676-d669-4821-836f-f7b04d957697">
+					<reportElement x="56" y="0" width="50" height="20" uuid="75a71676-d669-4821-836f-f7b04d957697">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="Arial" size="11" isBold="true"/>
@@ -420,19 +420,23 @@
 				</box>
 			</frame>
 			<frame>
-				<reportElement x="34" y="0" width="164" height="41" uuid="6f088eca-bb5f-4586-8bb6-c63d0c726e97"/>
+				<reportElement x="34" y="0" width="165" height="41" uuid="6f088eca-bb5f-4586-8bb6-c63d0c726e97">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
 			</frame>
 			<frame>
-				<reportElement x="198" y="0" width="52" height="41" uuid="7ee0a63b-dd97-4469-bd05-06bab0848d8e"/>
+				<reportElement x="199" y="0" width="50" height="41" uuid="7ee0a63b-dd97-4469-bd05-06bab0848d8e"/>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
 			</frame>
 			<frame>
-				<reportElement x="250" y="0" width="60" height="41" uuid="bec058f8-5182-4e92-8126-cb3d335d09af"/>
+				<reportElement x="249" y="0" width="61" height="41" uuid="bec058f8-5182-4e92-8126-cb3d335d09af">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
@@ -451,12 +455,12 @@
 	<pageFooter>
 		<band height="191" splitType="Stretch">
 			<frame>
-				<reportElement x="0" y="0" width="198" height="20" uuid="ebf47d43-21ab-482f-a5d9-b0d1893c93b9"/>
+				<reportElement x="0" y="0" width="199" height="20" uuid="ebf47d43-21ab-482f-a5d9-b0d1893c93b9"/>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
 				<frame>
-					<reportElement x="0" y="20" width="198" height="20" uuid="f2ca6729-0d9f-493a-95e7-c9fe7d4a20ca"/>
+					<reportElement x="0" y="20" width="199" height="20" uuid="f2ca6729-0d9f-493a-95e7-c9fe7d4a20ca"/>
 					<box>
 						<pen lineWidth="0.25"/>
 					</box>
@@ -468,7 +472,7 @@
 					</box>
 				</frame>
 				<staticText>
-					<reportElement x="0" y="0" width="198" height="20" uuid="609ab656-eddc-4038-9526-073f0b2ddee0">
+					<reportElement x="13" y="0" width="172" height="20" uuid="609ab656-eddc-4038-9526-073f0b2ddee0">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</reportElement>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -477,7 +481,7 @@
 					<text><![CDATA[JUMLAH]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="0" y="20" width="198" height="20" uuid="7ee62c4f-8e7c-4151-b9a4-a622c20f7b14">
+					<reportElement x="9" y="20" width="186" height="20" uuid="7ee62c4f-8e7c-4151-b9a4-a622c20f7b14">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</reportElement>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -496,24 +500,24 @@
 				</staticText>
 			</frame>
 			<frame>
-				<reportElement x="198" y="0" width="52" height="20" uuid="604d41be-8efe-49e6-a058-73db6953ecc1"/>
+				<reportElement x="199" y="0" width="50" height="20" uuid="604d41be-8efe-49e6-a058-73db6953ecc1"/>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
 				<frame>
-					<reportElement x="0" y="20" width="52" height="20" uuid="a6745ada-f78c-454f-b2ee-aeeaf31b3178"/>
+					<reportElement x="0" y="20" width="50" height="20" uuid="a6745ada-f78c-454f-b2ee-aeeaf31b3178"/>
 					<box>
 						<pen lineWidth="0.25"/>
 					</box>
 				</frame>
 			</frame>
 			<frame>
-				<reportElement x="250" y="0" width="60" height="20" uuid="b63efad2-2407-47be-9dd6-79875e0bc477"/>
+				<reportElement x="249" y="0" width="61" height="20" uuid="b63efad2-2407-47be-9dd6-79875e0bc477"/>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
 				<frame>
-					<reportElement x="0" y="20" width="60" height="20" uuid="09d606ff-11d7-4523-93fa-cab58cd1d83a"/>
+					<reportElement x="0" y="20" width="61" height="20" uuid="09d606ff-11d7-4523-93fa-cab58cd1d83a"/>
 					<box>
 						<pen lineWidth="0.25"/>
 					</box>

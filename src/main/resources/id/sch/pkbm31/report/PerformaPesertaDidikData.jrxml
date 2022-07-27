@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PesertaDidikReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7d10124b-78ec-4fc2-a06c-087f7475fffb">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SQLite - Rapor DB"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM AKUN_PENGGUNA]]>
+	</queryString>
+	<field name="table_id" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="table_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="table_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="AKUN_PENGGUNA"/>
+	</field>
+	<field name="jenis_pengguna" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="jenis_pengguna"/>
+		<property name="com.jaspersoft.studio.field.label" value="jenis_pengguna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="AKUN_PENGGUNA"/>
+	</field>
+	<field name="nama_lengkap" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="nama_lengkap"/>
+		<property name="com.jaspersoft.studio.field.label" value="nama_lengkap"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="AKUN_PENGGUNA"/>
+	</field>
+	<field name="nama_pengguna" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="nama_pengguna"/>
+		<property name="com.jaspersoft.studio.field.label" value="nama_pengguna"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="AKUN_PENGGUNA"/>
+	</field>
+	<field name="kata_sandi" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="kata_sandi"/>
+		<property name="com.jaspersoft.studio.field.label" value="kata_sandi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="AKUN_PENGGUNA"/>
+	</field>
+	<field name="pertanyaan_keamanan" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="pertanyaan_keamanan"/>
+		<property name="com.jaspersoft.studio.field.label" value="pertanyaan_keamanan"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="AKUN_PENGGUNA"/>
+	</field>
+	<field name="jawaban_keamanan" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="jawaban_keamanan"/>
+		<property name="com.jaspersoft.studio.field.label" value="jawaban_keamanan"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="AKUN_PENGGUNA"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="10" y="0" width="80" height="89" uuid="762b5ecf-d143-49a5-a4de-838819e6bb15"/>
+				<imageExpression><![CDATA["logoDKI.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="156" y="0" width="284" height="20" uuid="ee42879d-1016-4fdd-939f-dba89f782205"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUSAT KEGIATAN BELAJAR MASYARAKAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="21" width="150" height="26" uuid="ec2d2592-827d-432a-bfef-42b935421537"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="17" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PKBM NEGERI 31]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="41" width="370" height="19" uuid="bc98258e-090d-4780-86f3-8cdd336d274c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Kemang Timur Raya No.3, Kel. Bangka, Kec. Mampang Prapatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="60" width="220" height="20" uuid="cf7318c9-1e53-4679-9aee-151414fc7cb6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kota Administrasi Jakarta Selatan 13730]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="80" width="110" height="20" uuid="ccca9d1d-4e27-40ed-b086-a4aee545db1a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telp. (021) -7984921]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="85" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="78b5345e-4d31-4e8d-91bc-582d2008d75d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="12" width="555" height="26" uuid="34b886b2-0cff-41b9-bcfa-fd33853dcc79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERFORMA PESERTA DIDIK]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="60" width="124" height="20" uuid="f54be5d7-45f3-4e07-b773-a7097508a957"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_lengkap}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="60" width="90" height="20" uuid="f374a69f-522a-4fd1-af7b-54576f40379c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<text><![CDATA[Wali Kelas	:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="555" height="40" uuid="bb808849-7b54-439f-81a5-c469c43008f6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["PerformaPesertaDidikSubReportMax.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="40">
+			<subreport>
+				<reportElement x="0" y="0" width="555" height="40" uuid="0a04b5a7-c3e6-495d-8888-e1a1383d7a62">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["PerformaPesertaDidikSubReportMin.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="56" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="15" width="555" height="1" uuid="15932b93-bb67-4f97-b8b9-bcaef4ac81bf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="370" y="16" width="184" height="40" uuid="44674b40-42ac-4021-a82c-9d83ad95542b">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+					<paragraph rightIndent="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
