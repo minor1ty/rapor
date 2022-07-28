@@ -93,7 +93,7 @@ public class PesertaDidikDAO {
     //*************************************
     //UPDATE a Peserta Didik
     //*************************************
-    public static void editPesertaDidik (String table_id, String nisn, String nama_lengkap, String jenis_kelamin, String agama) throws SQLException, ClassNotFoundException {
+    public static void editPesertaDidik (String nisn, String nama_lengkap, String jenis_kelamin, String agama) throws SQLException, ClassNotFoundException {
         //Declare a UPDATE statement
         String updateStmt =
                         "   UPDATE PESERTA_DIDIK\n" +
@@ -101,7 +101,7 @@ public class PesertaDidikDAO {
                         "          nama_lengkap = '" + nama_lengkap + "',\n" +
                         "          jenis_kelamin = '" + jenis_kelamin + "',\n" +
                         "          agama = '" + agama + "'\n" +
-                        "    WHERE table_id = " + table_id + ";";
+                        "    WHERE nisn = " + nisn + ";";
         //Execute UPDATE operation
         try {
             DBUtil.dbExecuteUpdate(updateStmt);

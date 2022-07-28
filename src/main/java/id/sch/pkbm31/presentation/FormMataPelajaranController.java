@@ -31,15 +31,12 @@ public class FormMataPelajaranController {
     @FXML
     public TextField txtKodeMapel;
     
-    @FXML
-    public Label txtTableId;
     
     public MataPelajaran mataPelajaran;
     
     public void setMataPelajaran(MataPelajaran mataPelajaran) {
     	this.mataPelajaran = mataPelajaran;
     	
-    	txtTableId.textProperty().bindBidirectional(mataPelajaran.tableIdProperty(), new NumberStringConverter());
     	txtKodeMapel.textProperty().bindBidirectional(mataPelajaran.kodeMapelProperty());
     	txtNamaMapel.textProperty().bindBidirectional(mataPelajaran.namaMapelProperty());
     	txtPengetahuanKkm.textProperty().bindBidirectional(mataPelajaran.pengetahuanKkmProperty());

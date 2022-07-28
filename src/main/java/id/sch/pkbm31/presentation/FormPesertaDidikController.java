@@ -24,8 +24,6 @@ public class FormPesertaDidikController {
     @FXML
     public TextField txtNisn;
     
-    @FXML
-    public TextField txtTableId;
     
     public PesertaDidik pesertaDidik;
     
@@ -45,7 +43,6 @@ public class FormPesertaDidikController {
     public void setPesertaDidik(PesertaDidik pesertaDidik) {
     	this.pesertaDidik = pesertaDidik;
     	
-    	txtTableId.textProperty().bindBidirectional(pesertaDidik.tableIdProperty(), new NumberStringConverter());
     	txtNisn.textProperty().bindBidirectional(pesertaDidik.nisnProperty());
     	txtNamaLengkap.textProperty().bindBidirectional(pesertaDidik.namaLengkapProperty());
     	cboJenisKelamin.valueProperty().bindBidirectional(pesertaDidik.jenisKelaminProperty());

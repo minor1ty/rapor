@@ -13,19 +13,10 @@ import javafx.scene.control.TableView;
 public class NilaiSikapController {
 
     @FXML
-    private Button btnCetak;
-
-    @FXML
-    private MenuItem btnEksporExcel;
-
-    @FXML
     private Button btnHapus;
 
     @FXML
     private Button btnHome;
-
-    @FXML
-    private MenuItem btnPdf;
 
     @FXML
     private Button btnSunting;
@@ -46,22 +37,7 @@ public class NilaiSikapController {
     private TableColumn<?, ?> nisn;
 
     @FXML
-    private TableView<?> tblNilaiSikap;
-
-    @FXML
-    void cetak(ActionEvent event) {
-
-    }
-
-    @FXML
-    void eksporExcel(ActionEvent event) {
-
-    }
-
-    @FXML
-    void eksporPdf(ActionEvent event) {
-
-    }
+    private TableView tblNilaiSikap;
 
     @FXML
     void gotoHome(ActionEvent event) throws IOException {

@@ -31,7 +31,7 @@ public class CatatanWaliKelasDAO {
     //*******************************
     //SELECT Leger Nilai
     //*******************************
-    public static ObservableList<LegerNilai> searchCatatanWaliKelas () throws SQLException, ClassNotFoundException {
+    public static ObservableList<CatatanWaliKelas> searchCatatanWaliKelas () throws SQLException, ClassNotFoundException {
         //Declare a SELECT statement
         String selectStmt = "SELECT \n" +
 							"	A.nisn, B.nama_lengkap, A.catatan\n" +
@@ -43,9 +43,9 @@ public class CatatanWaliKelasDAO {
             //Get ResultSet from dbExecuteQuery method
             ResultSet rs = DBUtil.dbExecuteQuery(selectStmt);
             //Send ResultSet to the getEmployeeList method and get employee object
-            ObservableList<LegerNilai> legerNilaiList = getLegerNilaiList(rs);
+            ObservableList<CatatanWaliKelas> catatanWaliKelasList = getCatatanWaliKelasList(rs);
             //Return employee object
-            return legerNilaiList;
+            return catatanWaliKelasList;
         } catch (SQLException e) {
             System.out.println("SQL select operation has been failed: " + e);
             //Return exception
@@ -54,35 +54,31 @@ public class CatatanWaliKelasDAO {
     }
     
     //Select * from Leger Nilai operation
-    private static ObservableList<LegerNilai> getLegerNilaiList(ResultSet rs) throws SQLException, ClassNotFoundException {
+    private static ObservableList<CatatanWaliKelas> getCatatanWaliKelasList(ResultSet rs) throws SQLException, ClassNotFoundException {
         //Declare a observable List which comprises of User objects
-        ObservableList<LegerNilai> legerNilaiList = FXCollections.observableArrayList();
+        ObservableList<CatatanWaliKelas> catatanWaliKelasList = FXCollections.observableArrayList();
         while (rs.next()) {
-        	LegerNilai legerNilai = new LegerNilai();
-        	legerNilai.setTableId(rs.getInt("table_id"));
-        	legerNilai.setKodeMapel(rs.getString("kode_mapel"));
-        	legerNilai.setNisn(rs.getString("nisn"));
-        	legerNilai.setGanjil(rs.getInt("ganjil"));
-        	legerNilai.setGenap(rs.getInt("genap"));
-        	legerNilai.setNamaLengkap(rs.getString("nama_lengkap"));
-        	legerNilai.setNamaMapel(rs.getString("nama_mapel"));
+        	CatatanWaliKelas catatanWaliKelas = new CatatanWaliKelas();
+        	catatanWaliKelas.setNisn(rs.getString("nisn"));
+        	catatanWaliKelas.setNamaPesertaDidik(rs.getString("nama_lengkap"));
+        	catatanWaliKelas.setCatatan(rs.getString("catatan"));
             //Add user to the ObservableList
-        	legerNilaiList.add(legerNilai);
+        	catatanWaliKelasList.add(catatanWaliKelas);
         }
         //return userList (ObservableList of Users)
-        return legerNilaiList;
+        return catatanWaliKelasList;
     }
     
     //*************************************
     //INSERT a Leger Nilai
     //*************************************
-    public static void addLegerNilai (String kode_mapel, String nisn, String ganjil, String genap) throws SQLException, ClassNotFoundException {
+    public static void addCatatanWaliKelas (String nisn, String catatan) throws SQLException, ClassNotFoundException {
         //Declare a INSERT statement
         String updateStmt =
-                        "INSERT INTO LEGER_NILAI\n" +
-                        "(kode_mapel, nisn, ganjil, genap)\n" +
+                        "INSERT INTO CATATAN_WALIKELAS\n" +
+                        "(nisn, catatan)\n" +
                         "VALUES\n" +
-                        "('"+kode_mapel+"', '"+nisn+"', '"+ganjil+"', '"+genap+"');";
+                        "('"+nisn+"', '"+catatan+"');";
         
         //Execute INSERT operation
         try {
@@ -96,13 +92,12 @@ public class CatatanWaliKelasDAO {
     //*************************************
     //UPDATE a Leger Nilai
     //*************************************
-    public static void editLegerNilai (String kode_mapel, String nisn, String ganjil, String genap) throws SQLException, ClassNotFoundException {
+    public static void editCatatanWaliKelas (String nisn, String catatan) throws SQLException, ClassNotFoundException {
         //Declare a UPDATE statement
         String updateStmt =
-                        "   UPDATE LEGER_NILAI\n" +
-                        "      SET ganjil = '" + ganjil + "',\n" +
-                        "          genap = '" + genap + "'\n" +
-                        "    WHERE kode_mapel = '" + kode_mapel + "' AND nisn = '"+ nisn +"';";
+                        "   UPDATE CATATAN_WALIKELAS\n" +
+                        "      SET catatan = '" + catatan + "'\n" +
+                        "    WHERE nisn = '" + nisn + "';";
         //Execute UPDATE operation
         try {
             DBUtil.dbExecuteUpdate(updateStmt);
@@ -115,11 +110,11 @@ public class CatatanWaliKelasDAO {
     //*************************************
     //DELETE a Leger Nilai
     //*************************************
-    public static void deleteLegerNilai (int table_id) throws SQLException, ClassNotFoundException {
+    public static void deleteCatatanWaliKelas (String nisn) throws SQLException, ClassNotFoundException {
         //Declare a DELETE statement
         String updateStmt =
-                        "   DELETE FROM LEGER_NILAI\n" +
-                        "         WHERE table_id ="+ table_id +";";
+                        "   DELETE FROM CATATAN_WALIKELAS\n" +
+                        "         WHERE nisn ="+ nisn +";";
         //Execute UPDATE operation
         try {
             DBUtil.dbExecuteUpdate(updateStmt);

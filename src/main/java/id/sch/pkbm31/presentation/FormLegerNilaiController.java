@@ -68,8 +68,8 @@ public class FormLegerNilaiController {
     public void setLegerNilai(LegerNilai legerNilai) {
     	this.legerNilai = legerNilai;
     	
-    	//cboNamaPesertaDidik.valueProperty().bindBidirectional(legerNilai.namaLengkapProperty());
-    	//cboMataPelajaran.valueProperty().bindBidirectional(legerNilai.namaMapelProperty());
+    	cboNamaPesertaDidik.valueProperty().bindBidirectional(legerNilai.namaLengkapProperty());
+    	cboMataPelajaran.valueProperty().bindBidirectional(legerNilai.namaMapelProperty());
     	txtGanjil.textProperty().bindBidirectional(legerNilai.ganjilProperty(), new NumberStringConverter());
     	txtGenap.textProperty().bindBidirectional(legerNilai.genapProperty(), new NumberStringConverter());
     }

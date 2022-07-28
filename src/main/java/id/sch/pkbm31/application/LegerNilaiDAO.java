@@ -118,11 +118,12 @@ public class LegerNilaiDAO {
     //*************************************
     //DELETE a Leger Nilai
     //*************************************
-    public static void deleteLegerNilai (int table_id) throws SQLException, ClassNotFoundException {
+    public static void deleteLegerNilai (String kode_mapel, String nisn) throws SQLException, ClassNotFoundException {
         //Declare a DELETE statement
         String updateStmt =
                         "   DELETE FROM LEGER_NILAI\n" +
-                        "         WHERE table_id ="+ table_id +";";
+                        "         WHERE kode_mapel = '"+ kode_mapel +"' AND nisn = '" +nisn+ "';";
+        
         //Execute UPDATE operation
         try {
             DBUtil.dbExecuteUpdate(updateStmt);

@@ -1,5 +1,6 @@
 package id.sch.pkbm31.presentation;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
@@ -25,8 +26,11 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
 public class PesertaDidikController {
@@ -35,16 +39,11 @@ public class PesertaDidikController {
     private Button btnCetak;
 
     @FXML
-    private MenuItem btnEksporExcel;
-
-    @FXML
     private Button btnHapus;
 
     @FXML
     private Button btnHome;
-    
-    @FXML
-    private MenuItem btnPdf;
+
 
     @FXML
     private Button btnSunting;
@@ -54,10 +53,7 @@ public class PesertaDidikController {
 
     @FXML
     private TableView tblPesertaDidik;
-    
-    @FXML
-    private TableColumn<PesertaDidik, Integer> tableIdColumn;
-    
+     
     @FXML
     private TableColumn<PesertaDidik, String> nisnColumn;
     
@@ -86,7 +82,6 @@ public class PesertaDidikController {
     
     @FXML
     private void initialize() throws ClassNotFoundException, SQLException {
-    	tableIdColumn.setCellValueFactory(cellData -> cellData.getValue().tableIdProperty().asObject());
     	nisnColumn.setCellValueFactory(cellData -> cellData.getValue().nisnProperty());
     	namaLengkapColumn.setCellValueFactory(cellData -> cellData.getValue().namaLengkapProperty());
     	jenisKelaminColumn.setCellValueFactory(cellData -> cellData.getValue().jenisKelaminProperty());
@@ -108,27 +103,14 @@ public class PesertaDidikController {
     	JasperPrint jp;
     	Map param = new HashMap();
     	
-    	String reportPath = "/rapor/src/main/resources/id/sch/pkbm31/report/PesertaDidikReport.jasper";
-    	InputStream jasperStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(reportPath);
-    	if (jasperStream == null) {
-    	     System.out.println("Report Not Found");
-    	}
+    	String reportPath = "C:\\Users\\Development\\Documents\\EclipseProjects\\rapor\\src\\main\\resources\\id\\sch\\pkbm31\\report\\PesertaDidikReport.jasper";
     	
-    	jp = JasperFillManager.fillReport(jasperStream, param, DBUtil.dbConnect());
+    	
+    	jp = JasperFillManager.fillReport(reportPath, param, DBUtil.dbConnect());
     	
     	JasperViewer viewer = new JasperViewer(jp, false);
     	viewer.setTitle("Cetak Data Peserta Didik");
     	viewer.setVisible(true);
-    }
-
-    @FXML
-    void eksporExcel(ActionEvent event) {
-
-    }
-
-    @FXML
-    void eksporPdf(ActionEvent event) {
-
     }
 
     @FXML
@@ -194,6 +176,10 @@ public class PesertaDidikController {
     	FormPesertaDidikController formPesertaDidikController = fxmlLoader.getController();
     	formPesertaDidikController.setPesertaDidik(pesertaDidik);
     	
+    	if (event.getSource().equals(btnSunting)) {
+    		formPesertaDidikController.txtNisn.setDisable(true);
+    	}
+    	
     	Dialog<ButtonType> dialog = new Dialog<>();
     	dialog.setDialogPane(pesertaDidikDialogPane);
     	dialog.setTitle(DialogTitle);
@@ -205,7 +191,7 @@ public class PesertaDidikController {
     			PesertaDidikDAO.addPesertaDidik(formPesertaDidikController.txtNisn.getText(), formPesertaDidikController.txtNamaLengkap.getText(), formPesertaDidikController.cboJenisKelamin.getSelectionModel().getSelectedItem(), formPesertaDidikController.cboAgama.getSelectionModel().getSelectedItem());
 
     		} else if (mode == DialogMode.SUNTING) {
-    			PesertaDidikDAO.editPesertaDidik(formPesertaDidikController.txtTableId.getText(), formPesertaDidikController.txtNisn.getText(), formPesertaDidikController.txtNamaLengkap.getText(), formPesertaDidikController.cboJenisKelamin.getSelectionModel().getSelectedItem(), formPesertaDidikController.cboAgama.getSelectionModel().getSelectedItem());
+    			PesertaDidikDAO.editPesertaDidik(formPesertaDidikController.txtNisn.getText(), formPesertaDidikController.txtNamaLengkap.getText(), formPesertaDidikController.cboJenisKelamin.getSelectionModel().getSelectedItem(), formPesertaDidikController.cboAgama.getSelectionModel().getSelectedItem());
     		}
     		
 

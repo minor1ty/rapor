@@ -33,7 +33,7 @@
 		<band height="100" splitType="Stretch">
 			<image hAlign="Center">
 				<reportElement x="10" y="0" width="80" height="89" uuid="762b5ecf-d143-49a5-a4de-838819e6bb15"/>
-				<imageExpression><![CDATA["logoDKI.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:\\Users\\Development\\Documents\\EclipseProjects\\rapor\\src\\main\\resources\\id\\sch\\pkbm31\\report\\logoDKI.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="156" y="0" width="284" height="20" uuid="ee42879d-1016-4fdd-939f-dba89f782205"/>

@@ -2,6 +2,8 @@ package id.sch.pkbm31.presentation;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 import id.sch.pkbm31.Main;
@@ -10,11 +12,13 @@ import id.sch.pkbm31.application.LegerNilai;
 import id.sch.pkbm31.application.LegerNilaiDAO;
 import id.sch.pkbm31.application.MataPelajaran;
 import id.sch.pkbm31.application.MataPelajaranDAO;
+import id.sch.pkbm31.data.DBUtil;
 import id.sch.pkbm31.presentation.MataPelajaranController.DialogMode;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
@@ -22,6 +26,11 @@ import javafx.scene.control.DialogPane;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Alert.AlertType;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 public class LegerNilaiController {
 
@@ -29,19 +38,10 @@ public class LegerNilaiController {
     private Button btnCetak;
 
     @FXML
-    private MenuItem btnEksporExcel;
-
-    @FXML
-    private Button btnFilter;
-
-    @FXML
     private Button btnHapus;
 
     @FXML
     private Button btnHome;
-
-    @FXML
-    private MenuItem btnPdf;
 
     @FXML
     private Button btnSunting;
@@ -103,24 +103,20 @@ public class LegerNilaiController {
     }
     
     @FXML
-    void cetak(ActionEvent event) {
-
+    void cetak(ActionEvent event) throws ClassNotFoundException, JRException, SQLException {
+    	JasperPrint jp;
+    	Map param = new HashMap();
+    	
+    	String reportPath = "C:\\Users\\Development\\Documents\\EclipseProjects\\rapor\\src\\main\\resources\\id\\sch\\pkbm31\\report\\PerformaPesertaDidikData.jasper";
+    	
+    	
+    	jp = JasperFillManager.fillReport(reportPath, param, DBUtil.dbConnect());
+    	
+    	JasperViewer viewer = new JasperViewer(jp, false);
+    	viewer.setTitle("Cetak Data Peserta Didik");
+    	viewer.setVisible(true);
     }
 
-    @FXML
-    void eksporExcel(ActionEvent event) {
-
-    }
-
-    @FXML
-    void eksporPdf(ActionEvent event) {
-
-    }
-
-    @FXML
-    void filter(ActionEvent event) {
-
-    }
 
     @FXML
     void gotoHome(ActionEvent event) throws IOException {
@@ -128,8 +124,35 @@ public class LegerNilaiController {
     }
 
     @FXML
-    void hapus(ActionEvent event) {
-
+    void hapus(ActionEvent event) throws ClassNotFoundException, SQLException {
+    	LegerNilai legerNilai= (LegerNilai) tblLegerNilai.getSelectionModel().getSelectedItem();
+    	
+    	Optional<ButtonType> isConfirmed = showConfirmationDialog("Hapus Leger Nilai", "Konfirmasi Hapus", "Apakah anda yakin ingin menghapus leger nilai ini?");
+    	
+    	if (isConfirmed.get() == ButtonType.OK) {
+    		String kode_mapel = legerNilai.getKodeMapel();
+    		String nisn = legerNilai.getNisn();
+    		LegerNilaiDAO.deleteLegerNilai(kode_mapel, nisn);
+    	}
+    	
+    	try {
+            //Get all Users information
+            ObservableList<LegerNilai> legerNilaiData = LegerNilaiDAO.searchLegerNilai();
+            //Populate Employees on TableView
+            populateLegerNilai(legerNilaiData);
+        } catch (SQLException e){
+            System.out.println("Error occurred while getting employees information from DB.\n" + e);
+            throw e;
+        }
+    }
+    
+    private Optional<ButtonType> showConfirmationDialog(String title, String headerText, String contentText) {
+    	Alert alert = new Alert(AlertType.CONFIRMATION);
+    	alert.setTitle(title);
+    	alert.setHeaderText(headerText);
+    	alert.setContentText(contentText);
+    	
+    	return alert.showAndWait();
     }
 
     @FXML

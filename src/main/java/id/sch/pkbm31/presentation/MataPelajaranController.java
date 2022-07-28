@@ -2,11 +2,14 @@ package id.sch.pkbm31.presentation;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 import id.sch.pkbm31.Main;
 import id.sch.pkbm31.application.MataPelajaran;
 import id.sch.pkbm31.application.MataPelajaranDAO;
+import id.sch.pkbm31.data.DBUtil;
 import id.sch.pkbm31.presentation.PesertaDidikController.DialogMode;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +24,10 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Alert.AlertType;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 public class MataPelajaranController {
 
@@ -28,16 +35,11 @@ public class MataPelajaranController {
     private Button btnCetak;
 
     @FXML
-    private MenuItem btnEksporExcel;
-
-    @FXML
     private Button btnHapus;
 
     @FXML
     private Button btnHome;
 
-    @FXML
-    private MenuItem btnPdf;
 
     @FXML
     private Button btnSunting;
@@ -99,18 +101,18 @@ public class MataPelajaranController {
     }
 
     @FXML
-    void cetakMataPelajaran(ActionEvent event) {
-
-    }
-
-    @FXML
-    void eksporExcel(ActionEvent event) {
-
-    }
-
-    @FXML
-    void eksporPdf(ActionEvent event) {
-
+    void cetakMataPelajaran(ActionEvent event) throws ClassNotFoundException, JRException, SQLException {
+    	JasperPrint jp;
+    	Map param = new HashMap();
+    	
+    	String reportPath = "C:\\Users\\Development\\Documents\\EclipseProjects\\rapor\\src\\main\\resources\\id\\sch\\pkbm31\\report\\MataPelajaranReport.jasper";
+    	
+    	
+    	jp = JasperFillManager.fillReport(reportPath, param, DBUtil.dbConnect());
+    	
+    	JasperViewer viewer = new JasperViewer(jp, false);
+    	viewer.setTitle("Cetak Data Peserta Didik");
+    	viewer.setVisible(true);
     }
 
     @FXML
@@ -195,7 +197,7 @@ public class MataPelajaranController {
     			//MataPelajaranDAO.createSubMataPelajaran(tableId);
 
     		} else if (mode == DialogMode.SUNTING) {
-    			MataPelajaranDAO.editMataPelajaran(formMataPelajaranController.txtTableId.getText(), formMataPelajaranController.txtNamaMapel.getText(), formMataPelajaranController.txtPengetahuanKkm.getText(), formMataPelajaranController.txtPengetahuanTdkKkm.getText(), formMataPelajaranController.txtKeterampilanKkm.getText(), formMataPelajaranController.txtKeterampilanTdkKkm.getText());
+    			MataPelajaranDAO.editMataPelajaran(formMataPelajaranController.txtKodeMapel.getText(), formMataPelajaranController.txtNamaMapel.getText(), formMataPelajaranController.txtPengetahuanKkm.getText(), formMataPelajaranController.txtPengetahuanTdkKkm.getText(), formMataPelajaranController.txtKeterampilanKkm.getText(), formMataPelajaranController.txtKeterampilanTdkKkm.getText());
     		}
     		
 
